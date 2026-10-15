@@ -1,0 +1,1 @@
+Build step copies artifacts/model.joblib to serving/model.joblib before gcloud builds submit.
