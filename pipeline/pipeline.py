@@ -3,7 +3,7 @@ from kfp import dsl
 from kfp.dsl import Metrics, Output
 
 @dsl.component(base_image='python:3.11', packages_to_install=[
- 'pandas>=2.1,<3','numpy>=1.26,<3','scikit-learn>=1.4,<1.7','joblib>=1.3',
+ 'pandas>=2.1,<3','numpy>=1.26,<3','scikit-learn>=1.6,<1.7','joblib>=1.3',
  'xgboost>=2,<3','google-cloud-storage>=2.16','google-cloud-aiplatform>=1.60','mlflow>=2.12','shap>=0.45,<1','matplotlib>=3.8'
 ])
 def train_compare_component(data_gcs_uri: str, artifact_gcs_prefix: str, project_id: str, experiment_name: str, metrics: Output[Metrics]):
